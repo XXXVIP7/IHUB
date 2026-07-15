@@ -39,19 +39,18 @@
             background: linear-gradient(180deg, rgba(10,10,15,0.8) 0%, rgba(5,5,8,0) 100%);
         }
 
-        /* Ровный и увеличенный логотип Apple */
+        /* Идеально ровный и увеличенный логотип Apple */
         .apple-logo {
-            width: 65px;
-            height: 65px;
-            margin-bottom: 35px;
+            width: 75px;
+            height: 75px;
+            margin-bottom: 30px;
             fill: #ffffff;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
-            animation: pulseLogo 3s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+            transition: transform 0.3s ease;
         }
 
-        @keyframes pulseLogo {
-            0%, 100% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)); }
+        .apple-logo:hover {
+            transform: scale(1.05);
         }
 
         .hero h1 {
@@ -118,8 +117,7 @@
         .product-image {
             max-width: 100%;
             max-height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
 
@@ -323,9 +321,9 @@
     <!-- Шапка сайта -->
     <header class="hero">
         <div class="container">
-            <!-- Исправленный и отцентрованный логотип Apple -->
-            <svg class="apple-logo" viewBox="0 0 170 170">
-                <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.13-1.93-14.37-6.17-2.92-2.37-6.66-6.83-11.22-13.38-4.78-6.94-8.77-14.73-11.97-23.36-3.2-8.63-4.81-17.18-4.81-25.66 0-11.12 2.61-20.12 7.84-26.97 5.22-6.84 11.91-10.3 20.04-10.4 4.09 0 8.89 1.25 14.38 3.75 5.49 2.5 9.07 3.75 10.74 3.75 1.45 0 5.14-1.25 11.06-3.75 5.92-2.5 10.51-3.64 13.78-3.44 11.75.5 20.73 4.79 26.94 12.87-9.49 5.75-14.12 13.56-13.9 23.44.23 8 3.24 14.63 9.03 19.88 5.8 5.25 12.72 8 20.78 8.25 1.5.06 3.44-.13 5.81-.56 2.38-.44 4.41-.94 6.1-1.5 1.5-.63 2.76-1.13 3.76-1.5l1.63 3.88zM119.22 32.41c0-7.38-2.62-13.97-7.85-19.78-5.24-5.81-11.59-8.94-19.06-9.41-.13.88-.19 1.76-.19 2.63 0 7.13 2.72 13.63 8.16 19.5 5.44 5.87 11.75 9 18.94 9.41.25-1.01.37-1.95.37-2.9l-.37.55z"/>
+            <!-- Абсолютно правильный, центрированный векторный логотип Apple -->
+            <svg class="apple-logo" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-.107 3.81 1.48a4.87 4.87 0 0 1 3.03 4.52c-.04 2.62 2.15 3.88 2.18 3.91-0.02.06-.34 1.17-1.12 2.34M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.21.67-2.93 1.49-.62.69-1.16 1.84-1.01 2.96 1.12.09 2.27-.58 2.95-1.39z"/>
             </svg>
             <h1>iPhone напрямую с заводов Apple</h1>
             <p>Минуем посредников и экономим до 30-40% на логистике в Казахстан.</p>
@@ -341,7 +339,8 @@
                 <!-- Товар 1: iPhone 17 Pro Max -->
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 17 Pro Max" class="product-image">
+                        <!-- Локальный путь к твоей картинке -->
+                        <img src="iphone-17-promax.png" alt="iPhone 17 Pro Max" class="product-image">
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">iPhone 17 Pro Max</h3>
@@ -353,7 +352,8 @@
                 <!-- Товар 2: iPhone 17 Pro -->
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 17 Pro" class="product-image">
+                        <!-- Локальный путь к твоей картинке -->
+                        <img src="iphone-17-pro.png" alt="iPhone 17 Pro" class="product-image">
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">iPhone 17 Pro</h3>
@@ -365,7 +365,8 @@
                 <!-- Товар 3: MacBook Air 13 -->
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="MacBook Air 13" class="product-image">
+                        <!-- Локальный путь к твоей картинке -->
+                        <img src="macbook-air.png" alt="MacBook Air 13" class="product-image">
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">MacBook Air 13</h3>
